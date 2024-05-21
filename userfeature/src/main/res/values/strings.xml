@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">user feature</string>
+    <string name="home_screen_title">Home Screen</string>
+    <string name="user_detail_screen">User Detail Screen</string>
+    <string name="username_text">Username: %1$s</string>
+    <string name="street_text">Street: %1$s</string>
+    <string name="zip_code_text">Zip Code: %1$s</string>
+</resources>
