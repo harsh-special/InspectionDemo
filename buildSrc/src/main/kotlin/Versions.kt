@@ -14,6 +14,7 @@ object Versions {
     const val mockk = "1.12.0"
     const val coroutineTest = "1.6.4"
     const val androidApplication = "8.1.1"
+    const val constraintLayout = "2.1.3"
 }
 
 

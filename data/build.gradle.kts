@@ -42,6 +42,9 @@ dependencies {
     implementation(project(Modules.network))
     implementation(project(Modules.domain))
 
+    implementation(Libraries.gson)
+    implementation(Libraries.retrofit)
+
     // test libraries
     testImplementation(Libraries.junit)
     testImplementation(Libraries.coroutineTest)

@@ -3,6 +3,7 @@ plugins {
     id(BuildPlugins.kotlinAndroid)
     id(BuildPlugins.kotlinKapt)
     id(BuildPlugins.hiltAndroid)
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -57,6 +58,10 @@ dependencies {
     implementation(project(Modules.commonUI))
     implementation(project(Modules.commonCore))
     implementation(project(Modules.domain))
+
+    implementation(Libraries.constraintLayout)
+    implementation(Libraries.navigation)
+    implementation(Libraries.navigationUiKtx)
 
     // test libraries
     testImplementation(Libraries.junit)

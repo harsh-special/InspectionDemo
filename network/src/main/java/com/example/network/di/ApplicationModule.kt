@@ -1,11 +1,15 @@
 package com.example.network.di
 
+import android.content.Context
+import android.content.SharedPreferences
 import com.example.network.BuildConfig
 import com.example.network.coroutine.Dispatcher
 import com.example.network.service.ApiService
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.Dispatchers
 import okhttp3.OkHttpClient
@@ -22,7 +26,7 @@ object ApplicationModule {
 
     @Provides
     @Named("baseUrl")
-    fun provideBaseUrl(): String = "https://jsonplaceholder.typicode.com/"
+    fun provideBaseUrl(): String = "http://192.168.1.7:5000/"
 
     @Provides
     @Singleton
@@ -67,5 +71,17 @@ object ApplicationModule {
     fun provideDispatcher() = object : Dispatcher {
         override val main: CoroutineContext = Dispatchers.Main
         override val io: CoroutineContext = Dispatchers.IO
+    }
+
+    @Provides
+    @Singleton
+    fun provideSharedPreferences(@ApplicationContext context: Context): SharedPreferences {
+        return context.getSharedPreferences("inspection_prefs", Context.MODE_PRIVATE)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGson(): Gson {
+        return Gson()
     }
 }

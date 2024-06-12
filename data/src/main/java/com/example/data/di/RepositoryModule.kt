@@ -1,9 +1,9 @@
 package com.example.data.di
 
-import com.example.data.repository.UserInfoRepositoryImpl
-import com.example.data.repository.UserRepositoryImpl
-import com.example.domain.repository.UserInfoRepository
-import com.example.domain.repository.UserRepository
+import com.example.data.repository.InspectionRepositoryImpl
+import com.example.data.repository.LoginRepositoryImpl
+import com.example.domain.repository.InspectionRepository
+import com.example.domain.repository.LoginRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -13,8 +13,8 @@ import dagger.hilt.android.components.ViewModelComponent
 @InstallIn(ViewModelComponent::class)
 interface RepositoryModule {
     @Binds
-    fun bindUserRepository(userRepositoryImpl: UserRepositoryImpl): UserRepository
+    fun bindUserRepository(loginRepositoryImpl: LoginRepositoryImpl): LoginRepository
 
     @Binds
-    fun bindUserInfoRepository(userInfoRepositoryImpl: UserInfoRepositoryImpl): UserInfoRepository
+    fun bindInspectionRepository(inspectionRepositoryImpl: InspectionRepositoryImpl): InspectionRepository
 }

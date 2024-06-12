@@ -1,9 +1,9 @@
 package com.example.data.di
 
-import com.example.data.datasource.user.UserDataSource
-import com.example.data.datasource.user.UserDataSourceImpl
-import com.example.data.datasource.userinfo.UserInfoDataSource
-import com.example.data.datasource.userinfo.UserInfoDataSourceImpl
+import com.example.data.datasource.inspection.InspectionDataSource
+import com.example.data.datasource.inspection.InspectionDataSourceImpl
+import com.example.data.datasource.login.LoginDataSource
+import com.example.data.datasource.login.LoginDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -13,8 +13,8 @@ import dagger.hilt.android.components.ViewModelComponent
 @InstallIn(ViewModelComponent::class)
 interface DataSourceModule {
     @Binds
-    fun bindUserDataSource(userDataSourceImpl: UserDataSourceImpl): UserDataSource
+    fun bindUserDataSource(userDataSourceImpl: LoginDataSourceImpl): LoginDataSource
 
     @Binds
-    fun bindUserInfoDataSource(userInfoDataSourceImpl: UserInfoDataSourceImpl): UserInfoDataSource
+    fun bindInspectionDataSource(inspectionDataSourceImpl: InspectionDataSourceImpl): InspectionDataSource
 }

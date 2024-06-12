@@ -7,6 +7,8 @@ object BuildPlugins {
 }
 
 object Libraries {
+    val navigation by lazy { "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}" }
+    val constraintLayout by lazy { "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}" }
     val gson by lazy { "com.google.code.gson:gson:${Versions.gson}" }
     val coreKtx by lazy { "androidx.core:core-ktx:${Versions.coreKtx}" }
     val lifecycle by lazy { "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}" }

@@ -38,4 +38,5 @@ dependencies {
     implementation(Libraries.gson)
 
     implementation(Libraries.lifecycle)
+    implementation(Libraries.retrofit)
 }
